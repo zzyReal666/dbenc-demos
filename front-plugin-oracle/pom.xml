@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.zzy</groupId>
+        <artifactId>dbenc-demos</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.zzy</groupId>
+    <artifactId>front-plugin-oracle</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--   oracle 数据库依赖     -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>21.1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sinocipher</groupId>
+            <artifactId>zayk-dbenc-alg-plugin-5.5.1.jar</artifactId>
+            <version>5.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/zayk-dbenc-alg-plugin-5.5.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sinocipher</groupId>
+            <artifactId>zk</artifactId>
+            <version>5.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/zookeeper-5.5.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sinocipher</groupId>
+            <artifactId>jdbc-driver-plugin</artifactId>
+            <version>5.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/zayk-dbenc-plugin-5.5.1.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+</project>

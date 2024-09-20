@@ -16,17 +16,21 @@ public class FrontPluginMysqlApplication {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(FrontPluginMysqlApplication.class, args);
         Mysql bean = applicationContext.getBean(Mysql.class);
 
-        bean.initTable();
-        log.info("=================== initTable end ====================");
-
-        //插入数据
-        bean.batchInsert();
-        log.info("=================== insert data end ====================");
-
-        //更新数据
-        bean.execute(UPDATE_SQL);
+//        bean.initTable();
+//        log.info("=================== initTable end ====================");
+//
+//        //插入数据
+//        bean.batchInsert();
+//        log.info("=================== insert data end ====================");
+//
+//        //更新数据
+//        bean.execute(UPDATE_SQL);
 
         bean.executeQuery(SELECT_SQL);
+
+
+        //如果报错  Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+        //请参考：https://blog.csdn.net/bin_zi_123/article/details/103135584
     }
 
 }
