@@ -3,16 +3,16 @@ mode:
   repository:
     type: ZooKeeper  #固定为ZooKeeper 不要修改
     props:
-      namespace: ZA-192.168.7.113:18123  #替换为具体的数据库ip和端口
-      server-lists: 192.168.7.157:2181   #替换为具体的zookeeper集群ip和端口
+      namespace: ZA-192.168.7.113:8123  #替换为具体的数据库ip和端口
+      server-lists: 192.168.7.113:12181   #替换为具体的zookeeper集群ip和端口
       operationTimeoutMilliseconds: 50000  #连接超时时间
 dataSources:
   ds_0:
     #下面信息可以从原来的复制，注意名称，每种数据库连接池使用的名称不全一样，比如下面的url在hikari中为jdbcUrl
     dataSourceClassName: com.alibaba.druid.pool.DruidDataSource  #替换为具体的数据源完整类名
     driverClassName: com.clickhouse.jdbc.ClickHouseDriver     #替换为具体的数据库驱动类名，以数据库连接池自身配置为准
-    url: jdbc:clickhouse://192.168.7.113:18123/demo_ds_0 #替换为具体的数据库 URL 连接，以数据库连接池自身配置为准
-    username: default #替换为数据库用户名，以数据库连接池自身配置为准
+    url: jdbc:clickhouse://192.168.7.113:8123/zzy #替换为具体的数据库 URL 连接，以数据库连接池自身配置为准
+    username: zzy #替换为数据库用户名，以数据库连接池自身配置为准
     password: 123456 #替换为数据库密码，以数据库连接池自身配置为准
     maxPoolSize: 10 #最大连接数
     # 其他配置 配置的名字以数据库连接池为准
@@ -28,3 +28,4 @@ rules:
 #是否打印SQL语句 逻辑+实际 SQL
 props:
   sql-show: true
+
